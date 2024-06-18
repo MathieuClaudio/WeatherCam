@@ -119,7 +119,7 @@ fun WeatherViewLoaded(
                 Text(text = description, style = MaterialTheme.typography.titleMedium)
             }
             Text(
-                text = "sensacionTermica: ${st}°",
+                text = "Sensación Térmica: ${st}°",
                 style = MaterialTheme.typography.titleMedium
             )
         }
