@@ -3,7 +3,7 @@ package com.weathercam.router
 import android.annotation.SuppressLint
 import androidx.navigation.NavHostController
 
-class Navigation(
+class NavigationRoutes(
     val navHostController: NavHostController
 ): Router {
     @SuppressLint("DefaultLocale")

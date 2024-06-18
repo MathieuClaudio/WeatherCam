@@ -26,7 +26,7 @@ class RepositoryApi : IRepository {
     override suspend fun findCity(city: String): List<CityData> {
         val response = client.get("https://api.openweathermap.org/geo/1.0/direct"){
             parameter("q",city)
-            parameter("limit",15)
+            parameter("limit",5)
             parameter("appid",apiKey)
         }
 

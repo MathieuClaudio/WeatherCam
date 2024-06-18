@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.weathercam.repository.RepositoryApi
-import com.weathercam.router.Navigation
+import com.weathercam.router.NavigationRoutes
 
 @Composable
 fun WeatherPage(
@@ -16,7 +16,7 @@ fun WeatherPage(
     val weatherViewModel : WeatherViewModel = viewModel(
         factory = WeatherViewModelFactory(
             repositorio = RepositoryApi(),
-            router = Navigation(navHostController),
+            router = NavigationRoutes(navHostController),
             lat = lat,
             lon = lon
         )
