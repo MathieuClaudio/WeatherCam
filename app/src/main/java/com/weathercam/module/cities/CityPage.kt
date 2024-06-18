@@ -12,8 +12,8 @@ fun CityPage(
 ) {
     val cityViewModel : CityViewModel = viewModel(
         factory = CityViewModel.CitiesViewModelFactory(
-            irepository = RepositoryApi(),
-            router = NavigationRoutes(navHostController)
+            irepository = RepositoryApi(),                  // RepositoryMock
+            router = NavigationRoutes(navHostController)    // MockRouter
         )
     )
     CityView(

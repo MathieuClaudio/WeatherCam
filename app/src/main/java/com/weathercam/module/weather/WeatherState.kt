@@ -10,6 +10,6 @@ sealed class WeatherState {
         val st :Double = 0.0,
     ): WeatherState()
     data object Loading: WeatherState()
-    data object EmptyWeather: WeatherState()
+    //data object EmptyWeather: WeatherState()
     data class Error(val message: String): WeatherState()
 }

@@ -16,7 +16,7 @@ class WeatherViewModel(
     val lat : Float,
     val lon : Float
 ) : ViewModel() {
-    var weatherStateUI by mutableStateOf<WeatherState>(WeatherState.EmptyWeather)
+    var weatherStateUI by mutableStateOf<WeatherState>(WeatherState.Loading)
 
     fun runWeatherIntention(intention: WeatherIntention) {
         when(intention){
