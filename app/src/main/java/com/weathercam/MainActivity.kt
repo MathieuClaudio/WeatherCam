@@ -7,8 +7,6 @@
     import androidx.compose.material3.MaterialTheme
     import androidx.compose.material3.Surface
     import androidx.compose.ui.Modifier
-    import com.weathercam.model.cities.City
-    import com.weathercam.model.weather.Weather
     import com.weathercam.ui.theme.WeatherCamTheme
 
     class MainActivity : ComponentActivity() {
@@ -21,7 +19,7 @@
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                     ) {
-                        Weather()
+                        MainApp()
                     }
                 }
             }
