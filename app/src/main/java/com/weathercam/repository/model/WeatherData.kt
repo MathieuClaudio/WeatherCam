@@ -12,6 +12,7 @@ data class WeatherData (
     val main: Main,
     val wind: Wind,
     val clouds: Clouds,
+    val sys: Sys
 )
 
 @Serializable
@@ -48,4 +49,9 @@ data class Wind(
 @Serializable
 data class Clouds(
     val all: Long,
+)
+
+@Serializable
+data class Sys(
+    val country: String,
 )

@@ -34,7 +34,9 @@ class WeatherViewModel(
                     temperature = weatherCity.main.temp,
                     description = weatherCity.weather.first().description,
                     st = weatherCity.main.feels_like,
-                    humidity = weatherCity.main.humidity
+                    humidity = weatherCity.main.humidity,
+                    icon = weatherCity.weather.first().icon,
+                    country = weatherCity.sys.country
                 )
             } catch (exception: Exception){
                 weatherStateUI = WeatherState.Error(exception.localizedMessage ?: "Error!")

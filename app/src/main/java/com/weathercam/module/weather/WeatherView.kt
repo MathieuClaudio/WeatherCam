@@ -49,7 +49,9 @@ fun WeatherView(
                 temperature = state.temperature,
                 description = state.description,
                 st = state.st,
-                humidity = state.humidity
+                humidity = state.humidity,
+                icon = state.icon,
+                country = state.country
             )
             is WeatherState.Loading -> WeatherViewDoSomething()
         }
@@ -75,10 +77,12 @@ fun WeatherViewLoaded(
     temperature: Double,
     description: String,
     st: Double,
-    humidity: Long
+    humidity: Long,
+    icon: String,
+    country: String
 ) {
-    val iconCode = "10d"
-    val iconUrl = "https://openweathermap.org/img/wn/$iconCode@2x.png"
+    //val iconCode = icon
+    val iconUrl = "https://openweathermap.org/img/wn/$icon@2x.png"
     val currentTime = remember { System.currentTimeMillis() } // Obtener hora actual
     val formattedTime = remember(currentTime) { // Formatear hora
         SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault()).format(Date(currentTime))
@@ -98,8 +102,10 @@ fun WeatherViewLoaded(
                 text = formattedTime,
                 style = MaterialTheme.typography.bodyMedium
             )
+            val locale = Locale("", country)
+            val countryName = locale.displayCountry
             Text(
-                text = city,
+                text = "$city - $countryName",
                 style = MaterialTheme.typography.titleLarge
             )
             Text(

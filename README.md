@@ -3,7 +3,7 @@
 [![Logo WeatherCam](https://github.com/MathieuClaudio/WeatherCam/blob/main/logo.png)](https://github.com/MathieuClaudio/WeatherCam.git)
 
 [![Print Search](https://github.com/MathieuClaudio/WeatherCam/blob/main/print_search_v1.png)](https://github.com/MathieuClaudio/WeatherCam.git)
-[![Print Weather](https://github.com/MathieuClaudio/WeatherCam/blob/main/print_weather.png)](https://github.com/MathieuClaudio/WeatherCam.git)
+[![Print Weather](https://github.com/MathieuClaudio/WeatherCam/blob/main/print_weather_v1.png)](https://github.com/MathieuClaudio/WeatherCam.git)
 
 ## Instalación
 ```bash
@@ -21,6 +21,8 @@ git clone https://github.com/MathieuClaudio/WeatherCam.git
 - [x] Agregué un gif loading al buscar y al mostrar el clima.
 - [x] Agregué un objeto Locale de Java para obtener el nombre completo del país en lugar de su código ISO.
 - [x] Agregué la humedad y un Log en RepositoryApi para checar valores por el Logcat.
+- [x] Ahorta sí, los iconos son dinámicos.
+- [x] Agregué la posibilidad de ver el país tanto en la búsqueda como en el clima. Para el clima tuve que agregar el data class Sys en mi WeatherData.
 - [] Intenté guardar la configuración del ApiKey en el local.properties pero fallé con rotundo éxito.
 
 

@@ -7,8 +7,10 @@ sealed class WeatherState {
         val city: String = "",
         val temperature: Double = 0.0,
         val description: String= "",
-        val st :Double = 0.0,
+        val st: Double = 0.0,
         val humidity: Long= 0L,
+        val icon: String= "", // un icono por defecto
+        val country: String= ""
     ): WeatherState()
     data object Loading: WeatherState()
     //data object EmptyWeather: WeatherState()
