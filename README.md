@@ -2,7 +2,7 @@
 
 [![Logo WeatherCam](https://github.com/MathieuClaudio/WeatherCam/blob/main/logo.png)](https://github.com/MathieuClaudio/WeatherCam.git)
 
-[![Print Search](https://github.com/MathieuClaudio/WeatherCam/blob/main/print_search.png)](https://github.com/MathieuClaudio/WeatherCam.git)
+[![Print Search](https://github.com/MathieuClaudio/WeatherCam/blob/main/print_search_v1.png)](https://github.com/MathieuClaudio/WeatherCam.git)
 [![Print Weather](https://github.com/MathieuClaudio/WeatherCam/blob/main/print_weather.png)](https://github.com/MathieuClaudio/WeatherCam.git)
 
 ## Instalación
@@ -16,9 +16,11 @@ git clone https://github.com/MathieuClaudio/WeatherCam.git
 ```
 
 ## Tareas realizadas
-Cree un repositorio público en Github: https://github.com/MathieuClaudio/WeatherCam.git
+- [x] Cree un repositorio público en Github: https://github.com/MathieuClaudio/WeatherCam.git
+- [x] Inicie la aplicación android con los elementos básicos
+- [x] Agregué un objeto Locale de Java para obtener el nombre completo del país en lugar de su código ISO
+- [] Intenté guardar la configuración del ApiKey en el local.properties pero fallé con rotundo éxito
 
-Inicie la aplicación android con los elementos básicos
 
 Estructura:
 - com.weathercam

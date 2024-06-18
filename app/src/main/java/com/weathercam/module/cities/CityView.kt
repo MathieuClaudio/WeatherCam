@@ -28,6 +28,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.weathercam.R
 import com.weathercam.repository.model.CityData
+import java.util.Locale
 
 @Composable
 fun CityView(
@@ -83,8 +84,11 @@ fun ListCity(cities: List<CityData>, onSelect: (CityData) -> Unit) {
                 modifier = Modifier.padding(3.dp)
             ) {
                 Column(modifier = Modifier.padding(5.dp)) {
+                    val locale = Locale("", city.country)
+                    val countryName = locale.displayCountry
+
                     Text(
-                        text = city.name,
+                        text = "${city.name} - $countryName",
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface
