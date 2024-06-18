@@ -21,11 +21,13 @@ fun WeatherPage(
             lon = lon
         )
     )
+    val router = NavigationRoutes(navHostController)
     WeatherView(
         state = weatherViewModel.weatherStateUI,
         runIntention = { intention ->
             weatherViewModel.runWeatherIntention(intention)
-        }
+        },
+        router = router
     )
 
 }

@@ -1,5 +1,6 @@
 package com.weathercam.module.weather
 
+
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -26,15 +28,19 @@ import androidx.lifecycle.compose.LifecycleEventEffect
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.weathercam.R
+import com.weathercam.router.Router
+import com.weathercam.router.Routes
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+
 
 @Composable
 fun WeatherView(
     modifier: Modifier = Modifier,
     state: WeatherState,
-    runIntention: (WeatherIntention)-> Unit
+    runIntention: (WeatherIntention)-> Unit,
+    router: Router
 ) {
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
         runIntention(WeatherIntention.LoadedWeather)
@@ -51,7 +57,8 @@ fun WeatherView(
                 st = state.st,
                 humidity = state.humidity,
                 icon = state.icon,
-                country = state.country
+                country = state.country,
+                router= router
             )
             is WeatherState.Loading -> WeatherViewDoSomething()
         }
@@ -79,7 +86,8 @@ fun WeatherViewLoaded(
     st: Double,
     humidity: Long,
     icon: String,
-    country: String
+    country: String,
+    router: Router
 ) {
     //val iconCode = icon
     val iconUrl = "https://openweathermap.org/img/wn/$icon@2x.png"
@@ -134,6 +142,11 @@ fun WeatherViewLoaded(
                 text = "Humedad: ${humidity}°",
                 style = MaterialTheme.typography.titleMedium
             )
+
+            Spacer(modifier = Modifier.weight(1f))
+            Button(onClick = { router.navigateTo(Routes.CitiesRoutes) }) {
+                Text("Buscar otra ciudad")
+            }
         }
     }
 }
