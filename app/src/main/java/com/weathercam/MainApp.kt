@@ -24,7 +24,7 @@ fun MainApp(){
             CityPage(navHostController)
         }
         composable(
-            route = "clima?lat={lat}&lon={lon}",
+            route = "wheatherPage?lat={lat}&lon={lon}",
             arguments =  listOf(
                 navArgument("lat") { type= NavType.FloatType },
                 navArgument("lon") { type= NavType.FloatType }
