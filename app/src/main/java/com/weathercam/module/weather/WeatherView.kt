@@ -48,7 +48,8 @@ fun WeatherView(
                 city = state.city,
                 temperature = state.temperature,
                 description = state.description,
-                st = state.st
+                st = state.st,
+                humidity = state.humidity
             )
             is WeatherState.Loading -> WeatherViewDoSomething()
         }
@@ -73,7 +74,8 @@ fun WeatherViewLoaded(
     city: String,
     temperature: Double,
     description: String,
-    st: Double
+    st: Double,
+    humidity: Long
 ) {
     val iconCode = "10d"
     val iconUrl = "https://openweathermap.org/img/wn/$iconCode@2x.png"
@@ -120,6 +122,10 @@ fun WeatherViewLoaded(
             }
             Text(
                 text = "Sensación Térmica: ${st}°",
+                style = MaterialTheme.typography.titleMedium
+            )
+            Text(
+                text = "Humedad: ${humidity}°",
                 style = MaterialTheme.typography.titleMedium
             )
         }

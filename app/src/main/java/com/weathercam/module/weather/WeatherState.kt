@@ -8,6 +8,7 @@ sealed class WeatherState {
         val temperature: Double = 0.0,
         val description: String= "",
         val st :Double = 0.0,
+        val humidity: Long= 0L,
     ): WeatherState()
     data object Loading: WeatherState()
     //data object EmptyWeather: WeatherState()

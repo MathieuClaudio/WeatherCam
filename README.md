@@ -17,9 +17,11 @@ git clone https://github.com/MathieuClaudio/WeatherCam.git
 
 ## Tareas realizadas
 - [x] Cree un repositorio público en Github: https://github.com/MathieuClaudio/WeatherCam.git
-- [x] Inicie la aplicación android con los elementos básicos
-- [x] Agregué un objeto Locale de Java para obtener el nombre completo del país en lugar de su código ISO
-- [] Intenté guardar la configuración del ApiKey en el local.properties pero fallé con rotundo éxito
+- [x] Inicie la aplicación android con los elementos básicos.
+- [x] Agregué un gif loading al buscar y al mostrar el clima.
+- [x] Agregué un objeto Locale de Java para obtener el nombre completo del país en lugar de su código ISO.
+- [x] Agregué la humedad y un Log en RepositoryApi para checar valores por el Logcat.
+- [] Intenté guardar la configuración del ApiKey en el local.properties pero fallé con rotundo éxito.
 
 
 Estructura:

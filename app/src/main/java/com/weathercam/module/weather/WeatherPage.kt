@@ -15,7 +15,7 @@ fun WeatherPage(
 
     val weatherViewModel : WeatherViewModel = viewModel(
         factory = WeatherViewModelFactory(
-            repositorio = RepositoryApi(),
+            irepositorio = RepositoryApi(),
             router = NavigationRoutes(navHostController),
             lat = lat,
             lon = lon

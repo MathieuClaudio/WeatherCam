@@ -1,5 +1,6 @@
 package com.weathercam.repository
 
+import android.util.Log
 import com.weathercam.repository.model.CityData
 import com.weathercam.repository.model.WeatherData
 import io.ktor.client.HttpClient
@@ -32,6 +33,10 @@ class RepositoryApi : IRepository {
 
         if (response.status == HttpStatusCode.OK){
             val citiesList = response.body<List<CityData>>()
+            // Para chusmear los datos de latitud y longitud por el Logcat
+            for (cityData in citiesList) {
+                Log.d("API Response #########", "City: ${cityData.name}, Lat: ${cityData.lat}, Lon: ${cityData.lon}")
+            }
             return citiesList
         }else{
             throw Exception()

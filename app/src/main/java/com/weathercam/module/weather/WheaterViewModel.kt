@@ -34,6 +34,7 @@ class WeatherViewModel(
                     temperature = weatherCity.main.temp,
                     description = weatherCity.weather.first().description,
                     st = weatherCity.main.feels_like,
+                    humidity = weatherCity.main.humidity
                 )
             } catch (exception: Exception){
                 weatherStateUI = WeatherState.Error(exception.localizedMessage ?: "Error!")
@@ -44,7 +45,7 @@ class WeatherViewModel(
 }
 
 class WeatherViewModelFactory(
-    private val repositorio: IRepository,
+    private val irepositorio: IRepository,
     private val router: Router,
     private val lat: Float,
     private val lon: Float,
@@ -52,7 +53,7 @@ class WeatherViewModelFactory(
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(WeatherViewModel::class.java)) {
-            return WeatherViewModel(repositorio,router,lat,lon) as T
+            return WeatherViewModel(irepositorio,router,lat,lon) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
