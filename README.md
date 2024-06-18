@@ -1,4 +1,4 @@
-# Mi Proyecto iDiario
+# Mi Proyecto Weather App
 
 [![Logo WeatherCam](https://github.com/MathieuClaudio/WeatherCam/blob/main/logo.png)](https://github.com/MathieuClaudio/WeatherCam.git)
 
