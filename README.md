@@ -23,6 +23,7 @@ git clone https://github.com/MathieuClaudio/WeatherCam.git
 - [x] Agregué la humedad y un Log en RepositoryApi para checar valores por el Logcat.
 - [x] Ahorta sí, los iconos son dinámicos.
 - [x] Agregué la posibilidad de ver el país tanto en la búsqueda como en el clima. Para el clima tuve que agregar el data class Sys en mi WeatherData.
+- [x] En la vista de Clima, agregué un botón para volver a la pantalla de búsqueda
 - [] Intenté guardar la configuración del ApiKey en el local.properties pero fallé con rotundo éxito.
 
 
